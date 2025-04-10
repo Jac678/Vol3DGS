@@ -1,0 +1,8 @@
+torch==2.0.1
+torchvision==0.15.2
+torchaudio==2.0.2
+numpy<2
+tqdm
+wandb
+matplotlib
+slangtorch==1.3.7
