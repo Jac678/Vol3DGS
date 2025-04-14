@@ -1,4 +1,5 @@
-# Volumetrically Consistent 3D Gaussian Rasterization - **CVPR 2025 Highlight**
+# Volumetrically Consistent 3D Gaussian Rasterization
+ **<span style="color:red">CVPR 2025 Highlight</span>**
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/pdf/2412.03378) [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://chinmay0301ucsd.github.io/vol3dgs/)
 
@@ -7,9 +8,10 @@ This is the official implementation of the paper "Volumetrically Consistent 3D G
 >Abstract:
 Recently, 3D Gaussian Splatting (3DGS) has enabled photorealistic view synthesis at high inference speeds. However, its splatting-based rendering model makes several approximations to the rendering equation, reducing physical accuracy. We show that the core approximations in splatting are unnecessary, even within a rasterizer; we instead volumetrically integrate 3D Gaussians directly to compute the transmittance across them analytically. We use this analytic transmittance to derive more physically-accurate alpha values than 3DGS, which can directly be used within their framework. The result is a method that more closely follows the volume rendering equation (similar to ray-tracing) while enjoying the speed benefits of rasterization. Our method represents opaque surfaces with higher accuracy and fewer points than 3DGS. This enables it to outperform 3DGS for view synthesis (measured in SSIM and LPIPS). Being volumetrically consistent also enables our method to work out of the box for tomography. We match the state-of-the-art 3DGS-based tomography method with fewer points.
 
-![alt text](assets/image.png)![alt text](assets/image-1.png)
-## Roadmap
+![alt text](assets/image.png)
+![alt text](assets/real_results.png)
 - [X] Code for View Synthesis Rasterizer
+- [ ] Implementation notes new numbers
 - [ ] Code for Tomography Rasterizer
 
 ## Installation 
@@ -65,7 +67,7 @@ python3 metrics.py -m <output_model_paths>
 ## Tomography
 
 ## Citation
-If you find our work and code useful, please cite this work:
+If you find our work and code useful, please cite this work and ⭐ the repo:
 
 ```@misc{talegaonkar2025vol3dgs,
       title={Volumetrically Consistent 3D Gaussian Rasterization},
