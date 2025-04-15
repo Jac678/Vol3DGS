@@ -11,7 +11,7 @@ Recently, 3D Gaussian Splatting (3DGS) has enabled photorealistic view synthesis
 ![alt text](assets/image.png)
 ![alt text](assets/real_results.png)
 - [X] Code for View Synthesis Rasterizer
-- [ ] Code for Tomography Rasterizer
+- [X] Code for Tomography Rasterizer
 
 ## Installation 
 Our rasterizer is implemented in [slangtorch](https://github.com/shader-slang/slang-torch), based on the [slang implementation](https://github.com/google/slang-gaussian-rasterization) of 3DGS. We then integrated this rasterizer in the [official 3DGS codebase](https://github.com/graphdeco-inria/gaussian-splatting) for view synthesis experiments. In case of installation issues, please refer to the [Gaussian Splatting codebase](https://github.com/graphdeco-inria/gaussian-splatting), and the issues/solutions referenced there. 
@@ -64,7 +64,7 @@ python3 metrics.py -m <output_model_paths>
 * We have also added support for [AbsGS](https://ty424.github.io/AbsGS.github.io/) in our slang rasterizer, a better densification method (which we DO NOT use for this paper). To use that, add `--abs_gs` to the training command.
 
 ## Tomography
-TBD. 
+Please follow the instructions at [https://github.com/chinmay0301ucsd/r2_gaussian](https://github.com/chinmay0301ucsd/r2_gaussian) for setting up the tomography codebase, rasterizer and datasets.
 
 ## Citation
 If you find our work and code useful, please cite this work and ⭐ the repo:
@@ -79,4 +79,4 @@ If you find our work and code useful, please cite this work and ⭐ the repo:
 }
 ```
 ## Acknowledgements
-We thank [George Kopanas](https://grgkopanas.github.io/) for releading the 3DGS slang implementation, and [Sai Praveen Bangaru](https://people.csail.mit.edu/sbangaru/) for helping with questions regarding slangtorch. Also thanks to [Alex Mai](https://half-potato.gitlab.io/) for providing metric for the EVER paper on Tanks and Temples, and DeepBlending datasets.
+We thank [George Kopanas](https://grgkopanas.github.io/) for releading the 3DGS slang implementation, and [Sai Praveen Bangaru](https://people.csail.mit.edu/sbangaru/) for helping with questions regarding slangtorch. Also thanks to [Alex Mai](https://half-potato.gitlab.io/) for providing metric for the EVER paper on Tanks and Temples, and DeepBlending datasets. We also thank the [R2-Gaussian](https://github.com/chinmay0301ucsd/r2_gaussian) authors for providing an excellent codebase, making it easy to integrate our rasterizer into theirs.
