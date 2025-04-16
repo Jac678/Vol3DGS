@@ -64,6 +64,8 @@ python3 metrics.py -m <output_model_paths>
 
 * We have also added support for [AbsGS](https://ty424.github.io/AbsGS.github.io/) in our slang rasterizer, a better densification method (which we DO NOT use for this paper). To use that, add `--abs_gs` to the training command.
 
+* Incase there's issues in compiling slangtorch kernels while running the code, ensure that the paths are correctly set. Contact [slang discord](https://discord.gg/HaW3huae) for help, or raise an issue here. 
+
 ## Tomography
 Please follow the instructions at [https://github.com/chinmay0301ucsd/r2_gaussian](https://github.com/chinmay0301ucsd/r2_gaussian) for setting up the tomography codebase, rasterizer and datasets.
 
