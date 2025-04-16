@@ -28,14 +28,14 @@ conda env create -f environment.yml
 conda activate vol3dgs
 bash install.sh
 ```
-3. Alternatively, if you already have a working 3DGS conda environment, install the following in that environment:
+<!-- 3. Alternatively, if you already have a working 3DGS conda environment, install the following in that environment:
 ```
 pip install slangtorch==1.3.7 wandb matplotlib tqdm
 pip install -e submodules/slang-gaussian-rasterization
-```
+``` -->
 
 ## Training
-3. We use the same dataset format as 3DGS. 
+We use the same dataset format as 3DGS. 
 * Download nerfsynthetic from [this](https://www.kaggle.com/datasets/nguyenhung1903/nerf-synthetic-dataset) link. 
 * MipNeRF360 dataset can be downloaded from [here](https://jonbarron.info/mipnerf360/). 
 * Tanks and temples, and deepblending datasets from the [3DGS project page](https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/).
