@@ -26,6 +26,7 @@ git submodule update --init --recursive
 ```
 conda env create -f environment.yml
 conda activate vol3dgs
+conda install -c nvidia cudatoolkit=11.7 cuda-cudart-dev=11.7 cuda-nvcc=11.7
 bash install.sh
 ```
 <!-- 3. Alternatively, if you already have a working 3DGS conda environment, install the following in that environment:
