@@ -22,7 +22,7 @@ git clone --recursive https://github.com/chinmay0301ucsd/Vol3DGS
 cd Vol3DGS
 git submodule update --init --recursive
 ```
-2. Create and activate [Anaconda](https://www.anaconda.com/docs/tools/working-with-conda/environments) environment using the provided `environment.yml` file, and then pip install the other requirements. We tested our code with Python3.9.20 on a 3090 Ti, with Driver Version: 525.147.05, Ubuntu 22.04. Update the environment.yml file, if you are using a different version of cuda toolkit / pytorch. It should work with higher versions as well.
+2. Create and activate [Anaconda](https://www.anaconda.com/docs/tools/working-with-conda/environments) environment using the provided `environment.yml` file, and then pip install the other requirements. We tested our code with Python3.9.20 on a 3090 Ti, with Driver Version: 525.147.05, Ubuntu 22.04. Update the environment.yml file, if you are using a different version of cuda toolkit / pytorch. It should work with higher versions as well, but make sure to adjust the torch versions in `install.sh` accordingly. Note that slangtorch requires a system-wide nvcc/cuda-toolkit installation as well, to use the linker for compiling cuda kernels. The version of the system-wide toolkit can be different from the one in the environment.yml file.
 ```
 conda env create -f environment.yml
 conda activate vol3dgs
