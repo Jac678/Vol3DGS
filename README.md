@@ -1,7 +1,7 @@
 # Volumetrically Consistent 3D Gaussian Rasterization
  **<span style="color:red">CVPR 2025 Highlight</span>**
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/pdf/2412.03378) [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://chinmay0301ucsd.github.io/vol3dgs/)
+[![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/pdf/2412.03378) [![Project Page](https://img.shields.io/badge/Project-Page-blue)](https://chinmay0301.github.io/vol3dgs/)
 
 This is the official implementation of the paper "Volumetrically Consistent 3D Gaussian Rasterization" 
 
