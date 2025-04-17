@@ -22,7 +22,7 @@ git clone --recursive https://github.com/chinmay0301ucsd/Vol3DGS
 cd Vol3DGS
 git submodule update --init --recursive
 ```
-2. Create and activate [Anaconda](https://www.anaconda.com/docs/tools/working-with-conda/environments) environment using the provided `environment.yml` file, and then pip install the other requirements. We tested our code with Python3.9.20 on a 3090 Ti, with Driver Version: 525.147.05, Ubuntu 22.04. Update the environment.yml file, if you are using a different version of cuda toolkit / pytorch. It should work with higher versions as well.
+2. Create and activate [Anaconda](https://www.anaconda.com/docs/tools/working-with-conda/environments) environment using the provided `environment.yml` file, and then pip install the other requirements. We tested our code with Python3.9.20 on a 3090 Ti, with Driver Version: 525.147.05, Ubuntu 22.04. Update the environment.yml file, if you are using a different version of cuda toolkit / pytorch. It should work with higher versions as well, but make sure to adjust the torch versions in `install.sh` accordingly. Note that slangtorch requires a system-wide nvcc/cuda-toolkit installation as well, to use the linker for compiling cuda kernels. The version of the system-wide toolkit can be different from the one in the environment.yml file.
 ```
 conda env create -f environment.yml
 conda activate vol3dgs
@@ -63,6 +63,8 @@ python3 metrics.py -m <output_model_paths>
 * To avoid numerical instability, we have re-worked handling Gaussians with NaN scales (happens for Gaussians with very small scales due to numerical errors in the backprop for the scale parameter) in the rasterizer itself, to avoid NaNs in the gradients. We have also upgraded to the lastest slangtorch version for the code release.
 
 * We have also added support for [AbsGS](https://ty424.github.io/AbsGS.github.io/) in our slang rasterizer, a better densification method (which we DO NOT use for this paper). To use that, add `--abs_gs` to the training command.
+
+* Incase there's issues in compiling slangtorch kernels while running the code, ensure that the paths are correctly set. Contact [slang discord](https://discord.gg/HaW3huae) for help, or raise an issue here. 
 
 ## Tomography
 Please follow the instructions at [https://github.com/chinmay0301ucsd/r2_gaussian](https://github.com/chinmay0301ucsd/r2_gaussian) for setting up the tomography codebase, rasterizer and datasets.
